@@ -1,15 +1,13 @@
 import fetch from 'node-fetch'
 
-let handler = async (m, { conn, usedPrefix }) => {
-    let res = await fetch('https://api.waifu.pics/sfw/waifu')
-    if (!res.ok) throw await res.text()
-    let json = await res.json()
-    if (!json.url) throw 'Error!'
-    conn.sendButton(m.chat, 'Istrinya Kartun', author, json.url, [['waifu', `${usedPrefix}waifu`]], m)
+let handler = async (m, { conn, command }) => {
+	let url = 'https://api.lolhuman.xyz/api/random2/waifu?apikey=KitsuneOFC'
+	conn.sendButton(m.chat, '*Results From Waifu*', wm, await(await fetch(url)).buffer(), [['𝗡𝗘𝗫𝗧',`.${command}`]],m)
 }
-handler.help = ['waifu']
-handler.tags = ['anime']
-handler.limit = true
 handler.command = /^(waifu)$/i
-//MADE IN ERPAN 1140 BERKOLABORASI DENGAN BTS
+handler.tags = ['anime']
+handler.help = ['waifu']
+handler.limit = 1
+handler.register = true
+
 export default handler

@@ -3,21 +3,22 @@ import axios from 'axios'
 import cheerio from 'cheerio'
 
 let handler = async (m, { text }) => {
-	if (!text) throw 'Input Query'
+	if (!text) throw '*Fitur Untuk Mencari Jadwal TV*\n\n*_Contoh: .jadwaltv SCTV_*'
 	let res = await jadwalTV(text)
-	let txt = res.result.map((v) => `[${v.jam.replace('WIB', ' WIB')}] ${v.acara}`).join`\n`
-	m.reply(`Jadwal TV ${res.channel}\n\n${txt}`)
+	let txt = res.result.map((v) => `*[${v.jam.replace('WIB', ' WIB')}] - ${v.acara}*`).join`\n`
+	m.reply(`* 📺 Jadwal TV ${res.channel}*\n\n${txt}`)
 }
 handler.help = ['jadwaltv']
 handler.tags = ['tools']
 handler.command = /^jadwaltv$/i
-
+handler.register = true
+handler.limit = 1
 export default handler
 
 async function jadwalTV(name) {
 	let list = JSON.parse(fs.readFileSync('./src/jadwaltv.json', 'utf-8'))
 	let data = list.find((v) => (new RegExp(name, 'gi')).test(v.channel)), result = []
-	if (!data) throw 'List Channel Yg Tersedia:\n\n' + list.map(v => v.channel).sort().join('\n')
+	if (!data) throw '*List Channel Yg Tersedia:*\n\n' + list.map(v => v.channel).sort().join('\n')
 	let html = (await axios.get(`https://www.jadwaltv.net/${data.isPay ? 'jadwal-pay-tv/' : ''}${data.value}`)).data
 	let $ = cheerio.load(html)
 	$('div > table.table').find('tbody > tr').slice(1).each(function () {
