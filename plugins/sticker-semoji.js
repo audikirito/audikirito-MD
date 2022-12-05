@@ -144,7 +144,7 @@ let type = (args[0] || '').toLowerCase()
         case 'go':
           emoji.get(`${args[1]}`)
             .then(async emoji => {
-              let stiker = await sticker(false, emoji.images[1].url, 'Created By', 'Yushino Md')
+              let stiker = await sticker(false, emoji.images[1].url, 'Created By', 'audikirito Md')
               conn.sendFile(m.chat, stiker, 'sticker.webp', '', m, false, {
                 asSticker: true
                 })
