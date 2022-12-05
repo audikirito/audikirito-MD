@@ -25,7 +25,7 @@ let name = await conn.getName(who)
             { fromMe: false,
             participant: `0@s.whatsapp.net`, ...(m.chat ? 
             { remoteJid: "status@broadcast" } : {}) },
-            message: { "liveLocationMessage": { "title": "© CREATED BY YUSHINO MD","𝑨𝒍𝒅𝒊 𝑿 𝑨𝒊𝒔𝒚𝒂𝒉": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
+            message: { "liveLocationMessage": { "title": "© CREATED BY audikirito MD","KIANA KASLA": wm, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg')}}
            }
        let tag = `@${m.sender.replace(/@.+/, '')}`
   let mentionedJid = [m.sender]
@@ -35,7 +35,7 @@ let name = await conn.getName(who)
           showAdAttribution: true,
     mediaUrl: sgc,
     mediaType: 2,
-    description: '𝑨𝒍𝒅𝒊 𝑿 𝑨𝒊𝒔𝒚𝒂𝒉', 
+    description: 'AUDIKIRITO', 
     title: `${command} Sedang Di Proses`,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
@@ -47,7 +47,7 @@ let name = await conn.getName(who)
          externalAdReply: { showAdAttribution: true,
  mediaUrl: sgc,
     mediaType: 2, 
-    description: 'www.instagram.com/hyuura-official',
+    description: 'www.instagram.com/',
     title: `${effect}nya Sudah Jadi Boz`,
     body: wm,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
@@ -59,7 +59,7 @@ let name = await conn.getName(who)
           showAdAttribution: true,
     mediaUrl: sgc,
     mediaType: 2,
-    description: '𝑨𝒍𝒅𝒊 𝑿 𝑨𝒊𝒔𝒚𝒂𝒉', 
+    description: 'AUDIKIRITO', 
     title: 'Hai, ' + name + ' ' + ucapan,
     body: botdate,
     thumbnail: await(await fetch(pp)).buffer(),
@@ -73,7 +73,7 @@ let name = await conn.getName(who)
     title: "Iɴɪ Dʜ Sɪᴀᴘ Cᴜʏ 〠",
     body: wm,
     thumbnail: fs.readFileSync('./thumbnail.jpg'),
-    sourceUrl: `https://wa.me/6281361281833?text=Hᴀɪ+Bɢ+Aʟᴅɪ`
+    sourceUrl: `-`
      }}
   })
 }
