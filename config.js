@@ -85,8 +85,8 @@ global.snh = 'https://youtube.com/channel/'
 
 //⫹⫺ ╳╶╼╶╶╶╶┈ ⎝ DONASI ⎞ ┈╴╴╴╴╾╴╳ ⫹⫺
 global.pdana = '0838 9648 0283'
-global.povo = '-'
-global.pgopay = '0838 9648 0283'
+global.povo = '0838 9648 0283'
+global.pgopay = '-'
 global.plinkaja = '-' //link aja
 global.ppulsa = '0838 9648 0283'
 global.ppulsa2 = '-'
