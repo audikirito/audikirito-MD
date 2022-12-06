@@ -404,9 +404,12 @@ readmore: readMore
 text = text.replace(new RegExp(`%(${Object.keys(replace).sort((a, b) => b.length - a.length).join`|`})`, 'g'), (_, name) => '' + replace[name])
 
 //----------------- FAKE
+let pft = [global.fimg, global.fimgv, global.fpayment, global.ftroli, global.fkontak, global.fvn, global.fvid, global.ftextt, global.fliveLoc, global.fliveLoc2, global.ftoko, global.fdocs, global.fgclink, global.fgif]
+			                   // Pick Random
+		                     global.fakes = pft.getRandom()
 let ftoko = {
 key: {
-fromMe: false, 
+fromMe: false,
 participant: `${m.sender.split`@`[0]}` + '@s.whatsapp.net',
 remoteJid: 'status@broadcast',
 },
@@ -468,19 +471,19 @@ let snd = `${pickRandom([mangkane25,mangkane26,mangkane27,mangkane28,mangkane29,
 let audio = `https://raw.githubusercontent.com/aisyah-rest/mangkane/main/Mangkanenya/${snd}.mp3`
 await conn.sendFile(m.chat, audio, 'error.mp3', null, m, true, {
 type: 'audioMessage', 
-ptt: false, seconds: 0,contextInfo: {
-         externalAdReply: { showAdAttribution: true,
+ptt: false, seconds: 0,contextInfo: {
+         externalAdReply: { showAdAttribution: true,
  mediaUrl: sgc,
     mediaType: 2, 
     description: sgc,
-    title: "Kᴛɪᴋ .sᴏᴜɴᴅᴍᴇɴᴜ ᴜɴᴛᴋ ʏɢ ʟᴀɪɴ",
+    title: "𝗔𝘀𝗲𝗸𝗸𝗸",
     body: wm,
-    thumbnail: await (await fetch('https://telegra.ph/file/d2c93968ebaecd4b9a695.jpg')).buffer(),
+    thumbnail: await (await fetch('https://telegra.ph/file/d4f5ae690b4ca56df3739.jpg')).buffer(),
     sourceUrl: sgc
- 	  /*   sourceUrl: sig,
-           title: '◄⟬ ●━━━ ⧏ ⧎ ⧐ ━━━● ⟭►',  
-            body: 'Now Playing...', 
-           thumbnail: await (await fetch('https://telegra.ph/file/d2c93968ebaecd4b9a695.jpg')).buffer()*/
+ 	  /*   sourceUrl: sig,
+           title: '◄⟬ ●━━━ ⧏ ⧎ ⧐ ━━━● ⟭►',  
+            body: 'Now Playing...', 
+           thumbnail: await (await fetch('https://telegra.ph/file/c72133b197a68d3ea514d.jpg')).buffer()*/
 }
      }
     })
@@ -488,37 +491,46 @@ ptt: false, seconds: 0,contextInfo: {
 
 //------------------ menuny
 let ownernya = `@${nomorown.split`@`[0]}`
-let almenu = `╭──〔  𝐈𝐍𝐅𝐎 𝐔𝐒𝐄𝐑  〕─⬣
-│⬡ 𝑼𝒔𝒆𝒓 : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-│⬡ 𝑺𝒕𝒂𝒕𝒖𝒔 : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-│⬡ 𝑷𝒓𝒆𝒎𝒊𝒖𝒎 : ${usrs.premiumTime > 1 ? '✔ Ya': '✘ Tidak'}
-│⬡ 𝑹𝒐𝒍𝒆 : ${usrs.role}
-│⬡ 𝑳𝒊𝒎𝒊𝒕 : ${usrs.limit}
-│⬡ 𝑳𝒆𝒗𝒆𝒍 : ${usrs.limit}
-│⬡ 𝑴𝒐𝒏𝒆𝒚 : ${money}
-╰─────────────⬣
-╭──〔 𝑰𝒏𝒇𝒐 𝑩𝒐𝒕  〕─⬣
-│⬡ 𝑶𝒘𝒏𝒆𝒓: ${ownernya}
-│⬡ 𝑴𝒐𝒅𝒆: ${mode}
-│⬡ 𝑷𝒍𝒂𝒕𝒇𝒐𝒓𝒎: ${platform}
-│⬡ 𝑻𝒚𝒑𝒆: Nodejs 
-│⬡ 𝑩𝒂𝒊𝒍𝒆𝒚𝒔: Multi Device
-│⬡ 𝑷𝒓𝒆𝒇𝒊𝒙: ${_p}
-│⬡ 𝑼𝒑𝒕𝒊𝒎𝒆: ${mpt} 
-│⬡ 𝑫𝒂𝒕𝒂𝒃𝒂𝒔𝒆: ${totalreg}
-╰─────────────⬣`
+let almenu = `
+╭──────────⬣
+│ *Hallo ${tagnya}*
+╰─────────────────╮
+╭─────────────────╯
+│              *USER INFO*
+├─────────────────⬣
+├╮ *ɴᴀᴍᴇ* : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+┊│ *ʟᴇᴠᴇʟ:* ${usrs.level}
+┊│ *ᴛɪᴇʀ:* ${usrs.role}
+┊│ *ʟɪᴍɪᴛ:* ${usrs.limit}
+┊│ *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+┊│ *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Ya': 'Tidak'}
+┊╰─┬──────────────⬣
+┊╭─╯        *BOT INFO*
+┊│ *ᴛᴏᴛᴀʟ:* ${totalf} ғɪᴛᴜʀ
+┊│ *ᴠᴇʀsɪᴏɴ:* V.42
+┊│ *ʀᴇʟᴇᴀsᴇ:* 25 ɴᴏᴠᴇᴍʙᴇʀ 2021
+┊│ *ᴏᴡɴᴇʀ:* ${ownernya}
+┊│ *ᴍᴏᴅᴇ:* ${mode}
+┊│ *ᴘʟᴀᴛғᴏʀᴍ:* ${platform}
+┊│ *ᴛʏᴘᴇ:* Nodejs 
+┊│ *ʙᴀɪʟᴇʏs:* Multi Device
+┊│ *ᴘʀᴇғɪx:* ${_p}
+┊│ *ᴜᴘᴛɪᴍᴇ:* ${mpt} 
+├╯ *ᴅᴀᴛᴀʙᴀsᴇ:* ${totalreg}
+╰─────────────────⬣
+`
 let nomorwa = '0'
-let nomorowm1 = '6282123019956'
+let nomorowm1 = '6281361281833'
 let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
 let d2 = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
 let d3= 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
 let d4 = 'application/pdf'
 let d5 = 'text/rtf'
 let td = `${pickRandom([d1,d2,d3,d4,d5])}`
-let ᴛᴇs = `Pᴏᴡᴇʀ Bʏ ⬝ @${nomorwa.split`@`[0]}\nCʀᴇᴀᴛᴏʀ Bᴏᴛ ⬝ @${nomorown1.split`@`[0]}\n⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
+let ᴛᴇs = `*_Powered By @${nomorwa.split`@`[0]}_*\n*_Creator Bot @${nomorown1.split`@`[0]}_*\n𝗗𝗔𝗧𝗘: ${week} ${date}\n𝗧𝗜𝗠𝗘: ${wktuwib}`
 let thummb = fs.readFileSync('./thumbnail.jpg')
 
-conn.send2ButtonDoc(m.chat, almenu, readMore + text + `${ᴛᴇs}` + readMore, 'SᴇᴡᴀBᴏᴛ', '.sewa', 'Oᴡɴᴇʀ', '.owner', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'Jᴏɪɴ Mʏ Gᴄ Oғғɪᴄɪᴀʟ'}}})
+conn.send2ButtonDoc(m.chat, almenu, readMore + text + `${ᴛᴇs}` + readMore, '𝗦𝗘𝗪𝗔 𝗕𝗢𝗧', '.sewa', '𝗢𝗪𝗡𝗘𝗥', '.owner', m, { contextInfo: { forwardingScore: fsizedoc, externalAdReply: { body: 'Tes', containsAutoReply: true, mediaType: 1, mediaUrl: hwaifu.getRandom(),  renderLargerThumbnail: true, showAdAttribution: true, sourceId: 'Tes', sourceType: 'PDF', previewType: 'PDF', sourceUrl: sgc, thumbnail: fs.readFileSync('./thumbnail.jpg'), thumbnailUrl: sgc, title: 'Jᴏɪɴ Mʏ Gᴄ Oғғɪᴄɪᴀʟ'}}})
     
 //------------------- BUTTON VID
 /*conn.sendButton(m.chat, text, wm, 'https://youtu.be/3ONnszQtwz0', [['Ping', '.speed'],['Owner', '.owner'],['Donasi', '.donasi']],ftoko, { gifPlayback: true, contextInfo: { externalAdReply: {title: namebot, body: bottime, sourceUrl: sig, thumbnail: fs.readFileSync('./thumbnail.jpg') }}})*/
@@ -528,9 +540,9 @@ conn.reply(m.chat, 'Maaf, menu sedang error', m)
 throw e
 }
 }
-handler.command = /^(menu|\?)$/i
+handler.command = /^(tesm|\?)$/i
 
-handler.register = false
+handler.register = true
 handler.exp = 3
 
 export default handler
@@ -548,7 +560,7 @@ function clockString(ms) {
 let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
 let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
 let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-return [h, ' H ', m, ' M ', s, ' S '].map(v => v.toString().padStart(2, 0)).join('')
+return [h, ' H ', m, ' M ', s, ' S'].map(v => v.toString().padStart(2, 0)).join('')
 }
 function clockStringP(ms) {
 let ye = isNaN(ms) ? '--' : Math.floor(ms / 31104000000) % 10
@@ -563,7 +575,7 @@ function ucapan() {
 const time = moment.tz('Asia/Jakarta').format('HH')
 let res = "Sudah Dini Hari Kok Belum Tidur Kak? 🥱"
 if (time >= 4) {
-res = "Pagi Kak 🌄"
+res = "Pagi Lord 🌄"
 }
 if (time >= 10) {
 res = "Selamat Siang Kak ☀️"
