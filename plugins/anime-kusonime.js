@@ -3,7 +3,7 @@ let handler = async function (m, { text, isPrems, isOwner }) {
 	let user = global.db.data.users[m.sender]
     if (!text) throw '*Fitur Ini Untuk Mencari Anime Diweb Kusonime*\n\n*_Contoh: #kusonime Himegoto_*'
     await m.reply(global.wait)
- let res = await fetch('https://python-api-zhirrr.herokuapp.com/api/kuso?q=' + encodeURIComponent(text))
+ let res = await fetch('https://kusonime-scrapper.glitch.me/api/anime?q=' + encodeURIComponent(text))
 let json= await res.json()
   const raku =  `*JUDUL :* "${json.title}"\n\nInfo: ${json.info}\n\n*SINOPSIS :* ${json.sinopsis}\n\n*LINK DOWNLOADS:* ${json.link_dl}`
      conn.sendFile(m.chat,json.thumb, 'image.jpg', raku, m)
