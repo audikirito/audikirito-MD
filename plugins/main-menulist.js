@@ -10,7 +10,7 @@ import fetch from 'node-fetch'
 const defaultMenu = {
 before: ` `.trimStart(),
 header: '⃟⃟☰⃟⃟ᭁ═━┈━┈༓ *%category* ',
-body: `┆➨ %cmd %isPremium %islimit`,
+body: `┆◈▻ %cmd %isPremium %islimit`,
 footer: `⃟⃟⃟⃟࿑⃟⃟⃟࿐═┈༓᭄༤\n`,
 after: ` `,
 }
