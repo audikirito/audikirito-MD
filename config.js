@@ -55,11 +55,11 @@ global.nomorwa = '0'
 
 global.readMore = readMore
 global.author = 'Created By audikirito'
-global.namebot = '𝐘𝐮𝐬𝐡𝐢𝐧𝐨 𝐌𝐝'
-global.wm = '© 𝘾𝙧𝙚𝙖𝙩𝙚𝙙 𝘽𝙮 𝐘𝐮𝐬𝐡𝐢𝐧𝐨 𝐌𝐝'
+global.namebot = 'audikirito 𝐌𝐝'
+global.wm = '© 𝘾𝙧𝙚𝙖𝙩𝙚𝙙 𝘽𝙮 audikirito 𝐌𝐝'
 global.media = 'https://telegra.ph/file/a3e66e0fa840b08236c75.jpg'
 global.watermark = wm
-global.wm2 = '𝒀𝒖𝒔𝒉𝒊𝒏𝒐 𝑴𝒅 '
+global.wm2 = 'audikirito 𝑴𝒅 '
 global.botdate = `⫹⫺ DATE: ${week} ${date}\n⫹⫺ 𝗧𝗶𝗺𝗲: ${wktuwib}`
 global.packname = wm
 global.bottime = `T I M E : ${wktuwib}`
