@@ -1,4 +1,4 @@
-let handler = async (m, { conn, text }) => {
+/*let handler = async (m, { conn, text }) => {
     let yh = global.asupan
     let url = yh[Math.floor(Math.random() * yh.length)]
     conn.sendButton(m.chat, 'Random Video Loli Lucu', 'Lolinya Kaak', url, [['NEXT', '.asupanloli']], m)
@@ -7,6 +7,7 @@ let handler = async (m, { conn, text }) => {
   handler.tags = ['premium']
   handler.help = ['asupanloli']
   handler.premium = true
+handler.register = true
   export default handler
   
  global.asupan = [
@@ -51,3 +52,4 @@ let handler = async (m, { conn, text }) => {
   "https://storage.caliph71.xyz/asupan/tiktok/137.mp4",
   "https://storage.caliph71.xyz/asupan/tiktok/138.mp4"
 ]
+*/
