@@ -69,4 +69,5 @@ handler.command = /^neongoing$/i
 handler.register = true
 handler.limit = false
 export default handler
-module.exports = { neoUpdate, neoLink, neOngoing }
+
+
