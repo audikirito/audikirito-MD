@@ -492,27 +492,30 @@ ptt: false, seconds: 0,contextInfo: {
             body: 'Now Playing...', 
            thumbnail: await (await fetch('https://telegra.ph/file/c72133b197a68d3ea514d.jpg')).buffer()*/
 }
-     }
+     }2
     })
-    
+        
+
 //------------------ menuny
 let ownernya = `@${nomorown.split`@`[0]}`
-let almenu = `
-╭──────────⬣
-│ *Hallo ${tagnya}*
-╰─────────────────╮
-╭─────────────────╯
-│              *USER INFO*
-├─────────────────⬣
-├╮ *ɴᴀᴍᴇ* : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
-┊│ *ʟᴇᴠᴇʟ:* ${usrs.level}
-┊│ *ᴛɪᴇʀ:* ${usrs.role}
-┊│ *ʟɪᴍɪᴛ:* ${usrs.limit}
-┊│ *sᴛᴀᴛᴜs:* ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
-┊│ *ᴘʀᴇᴍɪᴜᴍ:* ${usrs.premiumTime > 1 ? 'Ya': 'Tidak'}
+let almenu = `┏┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈╼
+┆ Hᴀʟᴏ ${tagnya}
+┢╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╶╼
+┣╌ ⟪ *Yᴏᴜʀ Iɴғᴏ* ⟫
+┃▷ *Nᴀᴍᴇ* : ${usrs.registered ? usrs.name : conn.getName(m.sender)}
+┃▷ *Sᴛᴀᴛᴜs* : ${m.sender.split`@`[0] == nomorown ? 'Developer' : (usrs.premiumTime >= 1 ? 'Premium User' : 'Free User')}
+┃▷ *Pʀᴇᴍɪᴜᴍ* : ${usrs.premiumTime > 1 ? '✔ Ya': '✘ Tidak'}
+┃▷ *Rᴏʟᴇ* : ${usrs.role}
+┃▷ *Lɪᴍɪᴛ* : ${usrs.limit}
+┃▷ *Lᴇᴠᴇʟ* : ${usrs.limit}
+┃▷ *Mᴏɴᴇʏ* : ${money}
+┃▷ *ᴛɪᴇʀ:* ${usrs.role}
 ╰╴╴╴╳
 ▎▍▌▋▊▍▌▌▋▍▊▋▐▍▊▊▊▍▍
 ╭╴╴╼ ▻ *INFO BOT* ◅ ╾╶ ╮
+│◇ ᴛᴏᴛᴀʟ:* ${totalf} ғɪᴛᴜʀ
+│◇ ᴠᴇʀsɪᴏɴ:* V.1
+│◇ ʀᴇʟᴇᴀsᴇ:* 25 ɴᴏᴠᴇᴍʙᴇʀ 2021
 │◇ Aʟʟ Fɪᴛᴜʀ: ${totalf}
 │◇ Oᴡɴᴇʀ: ${ownernya}
 │◇ Mᴏᴅᴇ: ${mode}
@@ -522,7 +525,7 @@ let almenu = `
 │◇ Pʀᴇғɪx: ${_p}
 │◇ Uᴘᴛɪᴍᴇ: ${mpt} 
 │◇ Dᴀᴛᴀʙᴀsᴇ: ${totalreg}
-╰╸╳`
+╰─────────────────⬣
 let nomorwa = '0'
 let nomorowm1 = '6283896480283'
 let d1 = 'application/vnd.openxmlformats-officedocument.presentationml.presentation'
@@ -592,3 +595,4 @@ res = "Malam Kak 🌙"
 }
 return res
 }
+
