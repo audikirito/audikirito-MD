@@ -1,13 +1,13 @@
 import fetch from 'node-fetch'
 
 let handler = async (m, { conn, command }) => {
-	let url = 'https://api.lolhuman.xyz/api/random/art?apikey=KitsuneOFC'
-	conn.sendButton(m.chat, '*Results From Fanart*', wm, await(await fetch(url)).buffer(), [['𝗡𝗘𝗫𝗧',`.${command}`]],m)
+	let url = 'https://api.lolhuman.xyz/api/random/art?apikey=8e66d0934cf741bfd2182c16'
+	conn.sendButton(m.chat, 'Nih FanArtnya ', wm, await(await fetch(url)).buffer(), [['Next',`.${command}`]],m)
 }
 handler.command = /^(fanart)$/i
-handler.tags = ['anime']
+handler.tags = ['anime', 'premium', 'limitmenu']
 handler.help = ['fanart']
-handler.limit = 1
-handler.premium = true
+handler.limit = true
+handler.premium = false
 handler.register = true
 export default handler
