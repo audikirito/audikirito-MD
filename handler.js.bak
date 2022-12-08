@@ -7,7 +7,6 @@ import chalk from 'chalk'
 import fs from 'fs'
 import fetch from 'node-fetch'
 import moment from 'moment-timezone'
-import { weeaboo } from './lib/weeaboo.js'
 
 /**
  * @type {import('@adiwajshing/baileys')}
