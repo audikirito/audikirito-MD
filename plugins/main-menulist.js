@@ -95,7 +95,7 @@ let tags
 let emot = ` ${pickRandom(['⎔', '◈▻', '✦', '⭑', 'ᯬ', '⭔', '◉', '⬟', '᭻', '»', '〆', '々', '⛥', '✗', '⛊', '⚜', '⚝', '⚚', '♪'])}`
 let rndom = `${pickRandom(['defaultMenu', 'defmenu1'])}`
 let teks = `${args[0]}`.toLowerCase()
-let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'weebs', 'owner', 'nocategory']
+let arrayMenu = ['all', 'anime', 'update', 'maker', 'berita', 'edukasi', 'news', 'random', 'game', 'xp', 'islamic', 'stiker', 'rpg', 'kerangajaib', 'quotes', 'admin', 'group', 'premium', 'internet', 'anonymous', 'nulis', 'downloader', 'tools', 'fun', 'database','quran', 'vote', 'nsfw', 'audio', 'jadibot', 'info', 'owner', 'nocategory']
 if (!arrayMenu.includes(teks)) teks = '404'
 if (teks == 'all') tags = {
 'main': 'Main',
@@ -125,7 +125,6 @@ if (teks == 'all') tags = {
 'owner': 'Owner',
 'host': 'Host',
 'advanced': 'Advanced',
-'weebs': 'weebs',
 'info': 'Info',
 '': 'No Category',
 }
@@ -466,6 +465,44 @@ let fkon = { key: { fromMe: false, participant: `${m.sender.split`@`[0]}@s.whats
 
 const pp = await conn.profilePictureUrl(conn.user.jid).catch(_ => './src/avatar_contact.png')
 
+//------------------< MENU >----------------
+let mangkane25 = "mangkane25"
+let mangkane26 = "mangkane26"
+let mangkane27 = "mangkane27"
+let mangkane28 = "mangkane28"
+let mangkane29 = "mangkane29"
+let mangkane30 = "mangkane30"
+let mangkane31 = "mangkane31"
+let mangkane32 = "mangkane32"
+let mangkane33 = "mangkane33"
+let mangkane34 = "mangkane34"
+let mangkane35 = "mangkane35"
+let mangkane36 = "mangkane36"
+let mangkane37 = "mangkane37"
+let mangkane38 = "mangkane38"
+let mangkane39 = "mangkane39"
+let mangkane40 = "mangkane40"
+let snd = `${pickRandom([mangkane25,mangkane26,mangkane27,mangkane28,mangkane29,mangkane30,mangkane31,mangkane32,mangkane33,mangkane34,mangkane35,mangkane36,mangkane37,mangkane38,mangkane39,mangkane40])}`
+let audio = `https://raw.githubusercontent.com/aisyah-rest/mangkane/main/Mangkanenya/${snd}.mp3`
+await conn.sendFile(m.chat, audio, 'error.mp3', null, m, true, {
+type: 'audioMessage', 
+ptt: false, seconds: 0,contextInfo: {
+         externalAdReply: { showAdAttribution: true,
+ mediaUrl: sgc,
+    mediaType: 2, 
+    description: sgc,
+    title: "𝗔𝘀𝗲𝗸𝗸𝗸",
+    body: wm,
+    thumbnail: await (await fetch('https://telegra.ph/file/d4f5ae690b4ca56df3739.jpg')).buffer(),
+    sourceUrl: sgc
+ 	  /*   sourceUrl: sig,
+           title: '◄⟬ ●━━━ ⧏ ⧎ ⧐ ━━━● ⟭►',  
+            body: 'Now Playing...', 
+           thumbnail: await (await fetch('https://telegra.ph/file/c72133b197a68d3ea514d.jpg')).buffer()*/
+}
+     }
+    })
+    
 
 //------------------ menuny
 let ownernya = `@${nomorown.split`@`[0]}`
