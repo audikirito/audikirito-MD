@@ -36,6 +36,19 @@ const {
 
 const { CONNECTING } = ws
 const { chain } = lodash
+const path = require('path')
+const fs = require('fs')
+const yargs = require('yargs/yargs')
+const cp = require('child_process')
+const syntaxerror = require('syntax-error')
+const P = require('pino')
+const os = require('os')
+const chalk = require('chalk')
+global.timestamp = {
+start: new Date
+}
+global.Scraper = require('./lib/scraper.js')
+
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 protoType()
@@ -125,13 +138,13 @@ async function connectionUpdate(update) {
     global.timestamp.connect = new Date
   }
   if (global.db.data == null) loadDatabase()
-   if (update.receivedPendingNotifications) conn.sendButtonDoc(`6281361281833@s.whatsapp.net`, 
+   if (update.receivedPendingNotifications) conn.sendButtonDoc(`6283896480283@s.whatsapp.net`, 
 `┏═══════════════════
 ┃╴◈ Bᴏᴛ Tᴇʟᴀʜ Tᴇʀsᴀᴍʙᴜɴɢ
 ┣═══════════════════
 ┃╴▶ Nᴏᴍᴏʀ : ${global.nomorbot}
 ┃╴▶ Nᴀᴍᴇ Bᴏᴛ : ${global.namebot}
-tags 
+┖┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬┬
 `, wm, 'Oᴡɴᴇʀ', '.owner', null
 )
 }
@@ -176,7 +189,6 @@ let welc = `
 │ *ᴜᴍᴜʀ:* 
 │ *ɢᴇɴᴅᴇʀ:*
 ┗–––━━┅┅┅
-
 –––┅┅ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ* ┅┅––––––
 @desc`
 let lef = 
