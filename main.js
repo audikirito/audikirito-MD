@@ -36,14 +36,6 @@ const {
 
 const { CONNECTING } = ws
 const { chain } = lodash
-const path = require('path')
-const fs = require('fs')
-const yargs = require('yargs/yargs')
-const cp = require('child_process')
-const syntaxerror = require('syntax-error')
-const P = require('pino')
-const os = require('os')
-const chalk = require('chalk')
 global.timestamp = {
 start: new Date
 }
