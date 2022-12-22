@@ -37,7 +37,7 @@ const {
 
 const { CONNECTING } = ws
 const { chain } = lodash
-const { Scraper } = require('./lib/scraper.js')
+
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 protoType()
