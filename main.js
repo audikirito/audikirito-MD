@@ -28,6 +28,7 @@ import {
   mongoDBV2
 } from './lib/mongoDB.js'
 import store from './lib/store.js'
+import Scraper from './lib/scraper.js'
 
 const {
   useSingleFileAuthState,
@@ -36,11 +37,6 @@ const {
 
 const { CONNECTING } = ws
 const { chain } = lodash
-global.timestamp = {
-start: new Date
-}
-global.Scraper = require('./lib/scraper.js')
-
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 protoType()
@@ -171,31 +167,30 @@ global.reloadHandler = async function (restatConn) {
   }
   
 let welc = `
-❖━━━[ *어서 오십시오* ]━━━❖
-┏––––––━━━━━━━━•
-│☘︎ @subject
-┣━━━━━━━━┅┅┅
-│( 👋 Hallo @user
-├[ *ɪɴᴛʀᴏ* ]—
-│ *ɴᴀᴍᴀ:* 
-│ *ᴜᴍᴜʀ:* 
-│ *ɢᴇɴᴅᴇʀ:*
-┗–––━━┅┅┅
+𝗥 𝗘 𝗖 𝗘 𝗣 𝗧 𝗜 𝗢 𝗡 👋
 
-–––┅┅ *ᴅᴇsᴄʀɪᴘᴛɪᴏɴ* ┅┅––––––
+*Welcome @user*
+*In @subject*
+
+*Dont Forget To Introduce Yourself*
+
+*Bot Official Group*
+*https://chat.whatsapp.com/HanfYszpKzbGcCGgWdHLTa*
+
+*Description:*
 @desc`
 let lef = 
-`❖━━━[ *나중에 봐요* ]━━━❖
-𝚂𝚊𝚢𝚘𝚗𝚊𝚛𝚊𝚊 *@user* 👋😃`
+`𝗥 𝗘 𝗟 𝗔 𝗫 👋
+*Goodbye @user*`
 
   conn.welcome = welc
   conn.bye = lef
-  conn.spromote = '@user sekarang admin!'
-  conn.sdemote = '@user sekarang bukan admin!'
-  conn.sDesc = 'Deskripsi telah diubah ke \n@desc'
-  conn.sSubject = 'Judul grup telah diubah ke \n@subject'
-  conn.sIcon = 'Icon grup telah diubah!'
-  conn.sRevoke = 'Link group telah diubah ke \n@revoke'
+  conn.spromote = '*_@user Naik Pangkat Menjadi Admin_*'
+  conn.sdemote = '*_@user Turun Pangkat Menjadi Member_*'
+  conn.sDesc = '*Deskripsi Telah Diubah Ke:*\n*@desc*'
+  conn.sSubject = '*Judul Grup Telah Diubah Ke:*\n*@subject*'
+  conn.sIcon = '*_Ikon Grup Telah Diubah_*'
+  conn.sRevoke = '*_Tautan Grup Telah Diacak_*'
   conn.handler = handler.handler.bind(global.conn)
   conn.participantsUpdate = handler.participantsUpdate.bind(global.conn)
   conn.groupsUpdate = handler.groupsUpdate.bind(global.conn)
