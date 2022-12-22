@@ -28,7 +28,7 @@ import {
   mongoDBV2
 } from './lib/mongoDB.js'
 import store from './lib/store.js'
-import Scraper from './lib/scraper.js'
+
 
 const {
   useSingleFileAuthState,
@@ -37,6 +37,7 @@ const {
 
 const { CONNECTING } = ws
 const { chain } = lodash
+const { Scraper } = require('./lib/scraper.js')
 const PORT = process.env.PORT || process.env.SERVER_PORT || 3000
 
 protoType()
