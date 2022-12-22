@@ -1,7 +1,7 @@
 {
-    "name": "Aldiaisyah",
+    "name": "audisw official BOT",
     "version": "3.0.0",
-    "description": "WhatsApp BOT By Aldi",
+    "description": "WhatsApp BOT By audi",
     "main": "index.js",
     "type": "module",
     "directories": {
@@ -22,16 +22,16 @@
         "whatsapp",
         "wabot-aq"
     ],
-    "homepage": "https://github.com/hyuura-official",
+    "homepage": "https://github.com/audikirito-md",
     "author": {
-        "name": "Aldi"
+        "name": "audikirito"
     },
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/hyuura-official"
+        "url": "git+https://github.com/audikirito-md"
     },
     "bugs": {
-        "url": "https://github.com/hyuura-official"
+        "url": "https://github.com/audikirito-md"
     },
     "license": "GPL-3.0-or-later",
     "dependencies": {
@@ -92,6 +92,8 @@
         "xfarr-api": "github:xfar05/xfarr-api",
         "yargs": "^17.5.1", 
         "zs-extract": "^1.4.1"
+        "yt-search": "^2.10.2",
+        "yuzzu-api": "^1.0.2"
     },
     "optionalDependencies": {
         "wa-sticker-formatter": "^4.3.2"
