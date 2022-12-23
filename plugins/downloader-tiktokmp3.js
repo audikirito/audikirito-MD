@@ -33,8 +33,8 @@ ptt: false, seconds: 9999999,contextInfo: {
   conn.send2ButtonVid(m.chat, `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${args[0]}`, txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tta ${args[0]}`, m)
     }
 }
-handler.help = ['tiktokmp3', 'ttmp3'].map(v => v + ' <url>')
+handler.help = ['tiktok'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tiktokmp3|ttmp3)$/i
-
-module.exports = handler
+handler.command = /^(tiktokmp3|ttdlmp3|ttmp3|tiktokdlmp3|gettt)$/i
+handler.register = true
+export default handler
