@@ -14,8 +14,8 @@ import { tiktokdl, tiktokdlv2, tiktokdlv3 } from '@bochilteam/scraper'
          ['ᴀᴜᴅɪᴏ', `.tiktokaudio ${args}`], 
          [null, null]], m) 
  } 
- handler.help = ['tiktok', 'tiktok', 'tiktokdl'].map(v => v + ' <url>') 
- handler.tags = ['downloader'] 
- handler.command = /^(tik(tok)?(tok)?(dl)?)$/i 
-  
- export default handler
+handler.help = ['tiktok'].map(v => v + ' <url>')
+handler.tags = ['downloader']
+handler.command = /^(tiktok|ttdl|tt|tiktokdl)$/i
+
+export default handler
