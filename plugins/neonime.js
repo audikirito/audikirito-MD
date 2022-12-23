@@ -1,3 +1,5 @@
+import fs from 'fs'
+import fetch from 'node-fetch'
 case 'neonime':
 					frhan.updatePresence(from, Presence.composing) 
 					data = await fetchaditya(`https://api.vhtear.com/neonime_search?query=${body.slice(9)}&apikey=${VthearApi}`, {method: 'get'})
@@ -14,3 +16,8 @@ case 'neonime':
 					reply(teks.trim())
 					await limitAdd(sender) 
 					break   
+handler.help = ['neo']
+handler.tags = ['anime']
+handler.command = /^(neonime)$/i
+
+export default handler
