@@ -4,7 +4,7 @@ let handler = async(m, { conn, usedPrefix, text, args, command }) => {
 if (command == 'jooxs') {
 if (!text) throw `Contoh:
 ${usedPrefix + command} gustixa`
-let f = await fetch(`https://anabotofc.herokuapp.com/api/jooxsearch?apikey=AnaBot&query=${text}`)
+let f = await fetch(`https://violetics.pw/api/search/joox?apikey=beta&query=${text}`)
 let xx = await f.json()
 let v = xx.result
 let teks = v.map(v => {
