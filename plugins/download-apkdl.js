@@ -22,6 +22,6 @@ return `
 }
 handler.help = ['rexdl'].map(v => v + ' <apk>')
 handler.tags = ['tools']
-handler.command = /^(apkdl)$/i
+handler.command = /^(apkd)$/i
 
 export default handler
