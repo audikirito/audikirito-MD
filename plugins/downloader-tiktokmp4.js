@@ -1,21 +1,45 @@
-import { tiktokdl, tiktokdlv2, tiktokdlv3 } from '@bochilteam/scraper'
-import fetch from 'node-fetch'
+//Jan Recode Masszeh Axios Eror Nangis:v
+const fs = require ('fs')
+const fetch = require ('node-fetch')
+const axios = require ('axios')
+const { tiktokdl, tiktokdlv2 } = require ('@bochilteam/scraper')
 
 let handler = async (m, { conn, args, usedPrefix, command }) => {
-    if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
+global.ftroli = { key: { remoteJid: 'status@broadcast', participant: '0@s.whatsapp.net' }, message: { orderMessage: { itemCount: 999999999, status: 1, surface: 1, message: wm, orderTitle: wm, sellerJid: '0@s.whatsapp.net' } } }
+		global.fkontak = { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(m.chat ? { remoteJid: `status@broadcast` } : {}) }, message: { 'contactMessage': { 'displayName': wm, 'vcard': `BEGIN:VCARD\nVERSION:3.0\nN:XL;${wm},;;;\nFN:${wm},\nitem1.TEL;waid=${m.sender.split('@')[0]}:${m.sender.split('@')[0]}\nitem1.X-ABLabell:Ponsel\nEND:VCARD`, 'jpegThumbnail': fs.readFileSync('./thumbnail.jpg'), thumbnail: fs.readFileSync('./thumbnail.jpg'),sendEphemeral: true}}}
+    try {
+if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243`
+m.reply('Mohon Ditunggu yah Bro')
     const { author: { nickname }, video, description } = await tiktokdl(args[0])
-        .catch(async _ => await tiktokdlv2(args[0]))
-        .catch(async _ => await tiktokdlv3(args[0]))
-    const url = video.no_watermark2 || video.no_watermark || 'https://tikcdn.net' + video.no_watermark_raw || video.no_watermark_hd
+    .catch(async _ => await tiktokdlv2(args[0]))
+        .catch(async _ => await tiktokdl(args[0]))
+    const url = video.no_watermark || video.no_watermark2 || video.no_watermark_raw
     if (!url) throw 'Can\'t download video!'
-    conn.sendHydrated(m.chat, `${htki} ᴛɪᴋᴛᴏᴋ ᴡᴍ ${htka}`, `➔ ɴɪᴄᴋɴᴀᴍᴇ ${nickname}${description ? `\n➔ ᴅᴇsᴄʀɪᴘᴛɪᴏɴ:\n${description}` : ''}`, await (await fetch(url)).buffer(),
-        url, '🌎 s ᴏ ᴜ ʀ ᴄ ᴇ', null, null, [
-        ['ᴅᴏɴᴀꜱɪ', `.donasi`],
-        ['ᴀᴜᴅɪᴏ', `.tiktokaudio ${args}`],
-        [null, null]], m)
+    conn.sendButtonVid(m.chat, url, `
+*Pembuat:* ${nickname}
+*Deskripsi Vt:* ${description}
+_©By RullBOT_
+`.trim(), wm, `Audio`, `.ttmp3 ${args[0]}`, m, true, {
+type: 'audioMessage', 
+ptt: false, seconds: 3596400,contextInfo: {
+         externalAdReply: { showAdAttribution: true,
+ mediaUrl: 'https://telegra.ph/file/cce9ab4551f7150f1970d.jpg',
+    mediaType: 2, 
+    description: 'https://telegra.ph/file/cce9ab4551f7150f1970d.jpg',
+    title: "⌫     ⌨︎     ☏︎",
+    body: wm,
+    thumbnail: await (await fetch('https://telegra.ph/file/cce9ab4551f7150f1970d.jpg')).buffer(),
+    sourceUrl: 'https://telegra.ph/file/cce9ab4551f7150f1970d.jpg'
+  }
+  } })
+} catch {
+    if (!args[0]) throw 'Uhm...url nya mana?'
+  let txt = `🚀 *Link:* ${await(await axios.get(`https://tinyurl.com/api-create.php?url=${args[0]}`)).data}` 
+  conn.send2ButtonVid(m.chat, `https://api.lolhuman.xyz/api/tiktokwm?apikey=${lolkey}&url=${args[0]}`, txt, wm, `No Wm`, `.tiktoknowm ${args[0]}`, `Audio`, `.tta ${args[0]}`, m)
+    }
 }
-handler.help = ['tiktok', 'tiktok', 'tiktokdl'].map(v => v + ' <url>')
+handler.help = ['tiktok', 'tt', 'tiktokdl'].map(v => v + ' <url>')
 handler.tags = ['downloader']
-handler.command = /^(tik(tok)?(tok)?(dl)?)$/i
+handler.command = /^(tt|tik(tok)?(tok)?(toknowm)?(dl)?)$/i
 
-export default handler
+module.exports = handler
