@@ -1,5 +1,5 @@
 import { tiktokdl, tiktokdlv2, tiktokdlv3 } from '@bochilteam/scraper' 
-import fetch from 'node-fetch' 
+ import fetch from 'node-fetch' 
   
  let handler = async (m, { conn, args, usedPrefix, command }) => { 
      if (!args[0]) throw `Use example ${usedPrefix}${command} https://www.tiktok.com/@omagadsus/video/7025456384175017243` 
@@ -14,8 +14,8 @@ import fetch from 'node-fetch'
          ['ᴀᴜᴅɪᴏ', `.tiktokaudio ${args}`], 
          [null, null]], m) 
  } 
- handler.help = ['tiktok', 'tiktokdl'].map(v => v + ' <url>') 
+ handler.help = ['tiktok', 'tiktok', 'tiktokdl'].map(v => v + ' <url>') 
  handler.tags = ['downloader'] 
- handler.command = /^(tik(tok)?(dl)?)$/i 
+ handler.command = /^(tik(tok)?(tok)?(dl)?)$/i 
   
  export default handler
